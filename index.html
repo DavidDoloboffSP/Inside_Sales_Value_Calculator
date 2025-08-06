@@ -12,15 +12,35 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .toggle-bg:after {
-            content: '';
-            @apply absolute top-1 left-1 bg-white border border-gray-300 rounded-full h-6 w-6 transition-transform shadow-sm;
+        .toggle-switch-container {
+            position: relative;
+            width: 80px; /* Wider container for the toggle */
+            height: 40px; /* Taller container for the toggle */
+            border-radius: 9999px; /* Fully rounded */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #e2e8f0; /* Default track color (grey) */
         }
-        input:checked + .toggle-bg:after {
-            @apply transform translate-x-full;
+        .toggle-switch-container input {
+            display: none; /* Hide the actual checkbox */
         }
-        input:checked + .toggle-bg {
-            @apply bg-blue-600;
+        .toggle-switch-circle {
+            position: absolute;
+            top: 4px;
+            left: 4px; /* Initial position for the circle */
+            width: 32px; /* Size of the circle */
+            height: 32px; /* Size of the circle */
+            background-color: #ffffff; /* White circle */
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            transform: translateX(40px); /* Default to Commercial (right side) */
+        }
+        .toggle-switch-container input:checked + .toggle-switch-circle {
+            transform: translateX(0px); /* Move to Residential (left side) when checked */
+        }
+        .toggle-switch-container:has(input:checked) {
+            background-color: #2563eb; /* Blue when checked (Residential) */
         }
         .section-fade-in {
             animation: fadeIn 0.5s ease-in-out;
@@ -58,6 +78,22 @@
                 </div>
 
                 <div id="accordion-container" class="space-y-3">
+                    <!-- Accordion Item 0: How to Get to Gemini and Create a Gem -->
+                    <div class="border border-slate-200 rounded-lg">
+                        <button class="accordion-toggle flex justify-between items-center w-full p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
+                            <span>Step 0: Get Started with Gemini & Create a Gem</span>
+                            <svg class="accordion-icon w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content hidden p-4 pt-0 text-slate-600">
+                            <p class="mb-4">To begin, you'll need to access your Gemini instance and create a new Gem. This is where you'll "teach" the AI its role as the Value Calculator.</p>
+                            <ol class="list-decimal list-inside space-y-2 mb-4">
+                                <li><strong>Access Gemini:</strong> Navigate to your organization's Gemini platform.</li>
+                                <li><strong>Start New Gem:</strong> Look for an option like "Create New Gem" or "Build a Custom AI" within the Gemini interface. This is typically found on the main dashboard or a dedicated "Gems" section.</li>
+                                <li><strong>Name Your Gem:</strong> Give your Gem a descriptive name, such as "Simpro Value Calculator" or "ISR Value Gem."</li>
+                                <li><strong>Proceed to Configuration:</strong> Once named, you'll be prompted to configure the Gem's instructions and knowledge base, which are covered in the following steps.</li>
+                            </ol>
+                        </div>
+                    </div>
                     <!-- Accordion Item 1 -->
                     <div class="border border-slate-200 rounded-lg">
                         <button class="accordion-toggle flex justify-between items-center w-full p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
@@ -121,13 +157,13 @@
                              <div class="bg-slate-100 p-4 rounded-md border border-slate-200">
                                 <p class="font-semibold text-slate-800">Example Output Structure:</p>
                                 <ul class="list-disc list-inside space-y-1 mt-2">
-                                    <li>**Executive Summary:** A one-paragraph summary of the key findings.</li>
-                                    <li>**Key Value Metrics:** A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
-                                    <li>**Supporting Case Studies:** A reference to one or two case studies from the knowledge base that support the metrics.</li>
-                                    <li>**Talk Track Recommendation:** A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
-                                    <li>**Monthly Value Generated:** A section detailing the potential monetary value of hours and new tasks accomplished.</li>
-                                    <li>**Monthly Cost of Simpro Licenses:** A section outlining the cost of the required licenses.</li>
-                                    <li>**Net Monthly Impact:** The final calculated net gain or loss for the client.</li>
+                                    <li><strong>Executive Summary:</strong> A one-paragraph summary of the key findings.</li>
+                                    <li><strong>Key Value Metrics:</strong> A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
+                                    <li><strong>Supporting Case Studies:</strong> A reference to one or two case studies from the knowledge base that support the metrics.</li>
+                                    <li><strong>Talk Track Recommendation:</strong> A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
+                                    <li><strong>Monthly Value Generated:</strong> A section detailing the potential monetary value of hours and new tasks accomplished.</li>
+                                    <li><strong>Monthly Cost of Simpro Licenses:</strong> A section outlining the cost of the required licenses.</li>
+                                    <li><strong>Net Monthly Impact:</strong> The final calculated net gain or loss for the client.</li>
                                 </ul>
                              </div>
                         </div>
@@ -143,20 +179,20 @@
                              <div class="bg-slate-100 p-4 rounded-md border border-slate-200">
                                 <p class="font-semibold text-slate-800 mb-2">Example Input Structure:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
-                                    <li>"Please provide a value calculation for a [Customer Type] prospect."</li>
-                                    <li>"They are a [Industry] company called [Company Name]."</li>
-                                    <li>"They have [Number] field technicians."</li>
-                                    <li>"Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."</li>
-                                    <li>"The estimated annual cost of their current inefficiencies is [Amount]."</li>
+                                    <li>"Please provide a value calculation for a **[Customer Type]** prospect."</li>
+                                    <li>"They are a **[Industry]** company called **[Company Name]**."</li>
+                                    <li>"They have **[Number]** field technicians."</li>
+                                    <li>"Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."</li>
+                                    <li>"The estimated annual cost of their current inefficiencies is **[Amount]**."</li>
                                 </ul>
                                 
                                 <p class="font-semibold text-slate-800 mt-4 mb-2">Example Filled-In Prompt:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
-                                    <li>"Please provide a value calculation for a Residential prospect."</li>
-                                    <li>"They are an HVAC company called Polar Air."</li>
-                                    <li>"They have 50 field technicians."</li>
-                                    <li>"Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."</li>
-                                    <li>"The estimated annual cost of their current inefficiencies is $300,000."</li>
+                                    <li>"Please provide a value calculation for a **Residential** prospect."</li>
+                                    <li>"They are an **HVAC** company called **Polar Air**."</li>
+                                    <li>"They have **50** field technicians."</li>
+                                    <li>"Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."</li>
+                                    <li>"The estimated annual cost of their current inefficiencies is **$300,000**."</li>
                                 </ul>
                              </div>
                         </div>
@@ -170,15 +206,13 @@
                     <p class="mt-2 text-lg text-slate-600">Select a prospect type to see tailored value propositions and talking points.</p>
                 </div>
 
-                <div class="flex justify-center items-center gap-4 mb-8">
-                    <span id="residential-label" class="font-semibold text-lg text-slate-500">Residential</span>
-                    <label for="prospect-toggle" class="flex items-center cursor-pointer">
-                        <div class="relative">
-                            <input type="checkbox" id="prospect-toggle" class="sr-only">
-                            <div class="toggle-bg block bg-gray-200 w-14 h-8 rounded-full"></div>
-                        </div>
+                <div class="flex justify-center items-center gap-6 mb-8">
+                    <span id="residential-label" class="font-semibold text-xl text-slate-500 transition-colors duration-300">Residential</span>
+                    <label for="prospect-toggle" class="relative toggle-switch-container">
+                        <input type="checkbox" id="prospect-toggle" class="sr-only">
+                        <span class="toggle-switch-circle"></span>
                     </label>
-                    <span id="commercial-label" class="font-semibold text-lg text-blue-600">Commercial</span>
+                    <span id="commercial-label" class="font-semibold text-xl text-blue-600 transition-colors duration-300">Commercial</span>
                 </div>
 
                 <div id="talk-track-content" class="section-fade-in">
@@ -359,15 +393,15 @@
 
         function updateLabels(isCommercial) {
             if (isCommercial) {
-                commercialLabel.classList.add('text-blue-600');
+                commercialLabel.classList.add('text-blue-600', 'font-bold');
                 commercialLabel.classList.remove('text-slate-500');
                 residentialLabel.classList.add('text-slate-500');
-                residentialLabel.classList.remove('text-blue-600');
+                residentialLabel.classList.remove('text-blue-600', 'font-bold');
             } else {
-                residentialLabel.classList.add('text-blue-600');
+                residentialLabel.classList.add('text-blue-600', 'font-bold');
                 residentialLabel.classList.remove('text-slate-500');
                 commercialLabel.classList.add('text-slate-500');
-                commercialLabel.classList.remove('text-blue-600');
+                commercialLabel.classList.remove('text-blue-600', 'font-bold');
             }
         }
 
@@ -378,8 +412,10 @@
         });
         
         document.addEventListener('DOMContentLoaded', () => {
-            updateLabels(true);
-            renderTalkTracks('commercial');
+            // Initial state: Commercial is selected by default
+            toggle.checked = false; 
+            updateLabels(true); // Update labels for commercial
+            renderTalkTracks('commercial'); // Render commercial content
         });
 
         const accordions = document.querySelectorAll('.accordion-toggle');
