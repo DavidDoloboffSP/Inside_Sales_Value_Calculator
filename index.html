@@ -117,14 +117,46 @@
                              <svg class="accordion-icon w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="accordion-content hidden p-4 pt-0 text-slate-600">
-                             <p class="mb-2">When you create your Gem, its output should follow a clear and consistent structure to ensure it's easy for your team to use. A good format might be:</p>
+                             <p class="mb-2">When you create your Gem, its output should follow a clear and consistent structure to ensure it's easy for your team to use. A good format might be a detailed value calculation as demonstrated below:</p>
                              <div class="bg-slate-100 p-4 rounded-md border border-slate-200">
                                 <p class="font-semibold text-slate-800">Example Output Structure:</p>
                                 <ul class="list-disc list-inside space-y-1 mt-2">
                                     <li>**Executive Summary:** A one-paragraph summary of the key findings.</li>
-                                    <li>**Key Value Metrics:** A bulleted list of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
+                                    <li>**Key Value Metrics:** A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
                                     <li>**Supporting Case Studies:** A reference to one or two case studies from the knowledge base that support the metrics.</li>
-                                    <li>**Talk Track Recommendation:** A suggestion on how to frame this information, referencing the enablement guidelines.</li>
+                                    <li>**Talk Track Recommendation:** A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
+                                    <li>**Monthly Value Generated:** A section detailing the potential monetary value of hours and new tasks accomplished.</li>
+                                    <li>**Monthly Cost of Simpro Licenses:** A section outlining the cost of the required licenses.</li>
+                                    <li>**Net Monthly Impact:** The final calculated net gain or loss for the client.</li>
+                                </ul>
+                             </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 4 -->
+                    <div class="border border-slate-200 rounded-lg">
+                        <button class="accordion-toggle flex justify-between items-center w-full p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
+                            <span>Step 4: The User Input Prompt</span>
+                             <svg class="accordion-icon w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content hidden p-4 pt-0 text-slate-600">
+                             <p class="mb-2">To get the most effective value calculation, the ISR should provide the following information to the Gem, formatted with a bullet point for each item. You can copy and paste this structure.</p>
+                             <div class="bg-slate-100 p-4 rounded-md border border-slate-200">
+                                <p class="font-semibold text-slate-800 mb-2">Example Input Structure:</p>
+                                <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
+                                    <li>"Please provide a value calculation for a [Customer Type] prospect."</li>
+                                    <li>"They are a [Industry] company called [Company Name]."</li>
+                                    <li>"They have [Number] field technicians."</li>
+                                    <li>"Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."</li>
+                                    <li>"The estimated annual cost of their current inefficiencies is [Amount]."</li>
+                                </ul>
+                                
+                                <p class="font-semibold text-slate-800 mt-4 mb-2">Example Filled-In Prompt:</p>
+                                <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
+                                    <li>"Please provide a value calculation for a Residential prospect."</li>
+                                    <li>"They are an HVAC company called Polar Air."</li>
+                                    <li>"They have 50 field technicians."</li>
+                                    <li>"Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."</li>
+                                    <li>"The estimated annual cost of their current inefficiencies is $300,000."</li>
                                 </ul>
                              </div>
                         </div>
@@ -243,7 +275,7 @@
                     },
                     {
                         title: "Value Language",
-                        icon: "💸",
+                        icon: "💰",
                         content: [
                             "“Simpro helps you win back lost hours so you can grow revenue without adding headcount.”",
                             "“Our users see $100k+ in recovered margin annually just from better routing and admin automation.”"
