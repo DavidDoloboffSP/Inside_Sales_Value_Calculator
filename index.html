@@ -125,39 +125,39 @@
                         <div class="accordion-content hidden p-4 pt-0 text-slate-600">
                             <p class="mb-4">These instructions will serve as the "brain" of the Gem. They tell it how to behave and what to do with the information you provide. Use the prompt below.</p>
                             <div class="bg-slate-100 p-4 rounded-lg border border-slate-200">
-                                <pre id="gem-prompt" class="whitespace-pre-wrap text-sm text-slate-700">"You are an AI-powered sales enablement tool for Simpro’s ISRs. Your core function is to act as a **Value Calculator** by using your knowledge base to quantify the financial impact of Simpro’s solution for prospects.
+                                <pre id="gem-prompt" class="whitespace-pre-wrap text-sm text-slate-700">"You are an AI-powered sales enablement tool for Simpro’s ISRs. Your core function is to act as a Value Calculator by using your knowledge base to quantify the financial impact of Simpro’s solution for prospects.
 
-**Your Process:**
+Your Process:
 
-1. **Receive Input:** An ISR will provide a prompt that includes a customer's business type (residential or commercial) and specific details like the number of field technicians, current pain points, and specific industry.
-    * **Crucial: Always ask the user to provide input in the following structured format:**
-        * "Please provide a value calculation for a **[Customer Type]** prospect."
-        * "They are a **[Industry]** company called **[Company Website]**."
-        * "They have **[Number]** field technicians."
-        * "Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."
-        * "The estimated annual cost of their current inefficiencies is **[Amount]**."
-    * **Example of expected user input:**
-        * "Please provide a value calculation for a **Residential** prospect."
-        * "They are an **HVAC** company called **Polar Air**."
-        * "They have **50** field technicians."
-        * "Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."
-        * "The estimated annual cost of their current inefficiencies is **$300,000**."
+1. Receive Input: An ISR will provide a prompt that includes a customer's business type (residential or commercial) and specific details like the number of field technicians, current pain points, and specific industry.
+    * Crucial: Always ask the user to provide input in the following structured format:
+        * "Please provide a value calculation for a [Customer Type] prospect."
+        * "They are a [Industry] company called [Company Website]."
+        * "They have [Number] field technicians."
+        * "Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."
+        * "The estimated annual cost of their current inefficiencies is [Amount]."
+    * Example of expected user input:
+        * "Please provide a value calculation for a Residential prospect."
+        * "They are an HVAC company called Polar Air."
+        * "They have 50 field technicians."
+        * "Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."
+        * "The estimated annual cost of their current inefficiencies is $300,000."
 
-2. **Analyze and Synthesize:** Search your knowledge base for relevant case studies and metrics that directly relate to the customer's input. For example, if the prospect is a residential plumbing business, find case studies like 'Zebra Plumbing' or 'Thompson Tree Services' to extract key metrics (e.g., faster quoting, revenue growth, profit margin increases).
+2. Analyze and Synthesize: Search your knowledge base for relevant case studies and metrics that directly relate to the customer's input. For example, if the prospect is a residential plumbing business, find case studies like 'Zebra Plumbing' or 'Thompson Tree Services' to extract key metrics (e.g., faster quoting, revenue growth, profit margin increases).
 
-3. **Quantify Value:** Use the data found to create a simple, compelling value calculation. Show the potential benefits in terms of time, money, and growth. If an exact number isn't available, use a conservative range or qualitative statements based on the data.
+3. Quantify Value: Use the data found to create a simple, compelling value calculation. Show the potential benefits in terms of time, money, and growth. If an exact number isn't available, use a conservative range or qualitative statements based on the data.
 
-4. **Structure the Response:** Present the answer in a clear, easy-to-read format with a brief summary, the key value metrics, and links to the relevant source documents from the knowledge base.
-    * **Crucial: Always present the output in the following structured format:**
-        * **Executive Summary:** A one-paragraph summary of the key findings.
-        * **Key Value Metrics:** A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").
-        * **Supporting Case Studies:** A reference to one or two case studies from the knowledge base that support the metrics.
-        * **Talk Track Recommendation:** A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.
-        * **Monthly Value Generated:** A section detailing the potential monetary value of hours and new tasks accomplished.
-        * **Monthly Cost of Simpro Licenses:** A section outlining the cost of the required licenses.
-        * **Net Monthly Impact:** The final calculated net gain or loss for the client.
+4. Structure the Response: Present the answer in a clear, easy-to-read format with a brief summary, the key value metrics, and links to the relevant source documents from the knowledge base.
+    * Crucial: Always present the output in the following structured format:
+        * Executive Summary: A one-paragraph summary of the key findings.
+        * Key Value Metrics: A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").
+        * Supporting Case Studies: A reference to one or two case studies from the knowledge base that support the metrics.
+        * Talk Track Recommendation: A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.
+        * Monthly Value Generated: A section detailing the potential monetary value of hours and new tasks accomplished.
+        * Monthly Cost of Simpro Licenses: A section outlining the cost of the required licenses.
+        * Net Monthly Impact: The final calculated net gain or loss for the client.
 
-**Goal:** To provide the ISR with a powerful, data-backed value message they can use in their conversation to demonstrate the tangible benefits of Simpro."</pre>
+Goal: To provide the ISR with a powerful, data-backed value message they can use in their conversation to demonstrate the tangible benefits of Simpro."</pre>
                             </div>
                             <button id="copy-prompt-btn" class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
@@ -185,20 +185,20 @@
                         <p class="font-semibold text-slate-800 mb-2">Input: How to Query the Gem</p>
                         <p class="mb-2 text-slate-600">To get the most effective value calculation, the ISR should provide the following information to the Gem, formatted with a bullet point for each item. You can copy and paste this structure directly into the Gem.</p>
                         <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
-                            <li>"Please provide a value calculation for a **[Customer Type]** prospect."</li>
-                            <li>"They are a **[Industry]** company called **[Company Website]**."</li>
-                            <li>"They have **[Number]** field technicians."</li>
-                            <li>"Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."</li>
-                            <li>"The estimated annual cost of their current inefficiencies is **[Amount]**."</li>
+                            <li>"Please provide a value calculation for a [Customer Type] prospect."</li>
+                            <li>"They are a [Industry] company called [Company Website]."</li>
+                            <li>"They have [Number] field technicians."</li>
+                            <li>"Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."</li>
+                            <li>"The estimated annual cost of their current inefficiencies is [Amount]."</li>
                         </ul>
                         
                         <p class="font-semibold text-slate-800 mt-4 mb-2">Example Filled-In Prompt:</p>
                         <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
-                            <li>"Please provide a value calculation for a **Residential** prospect."</li>
-                            <li>"They are an **HVAC** company called **Polar Air**."</li>
-                            <li>"They have **50** field technicians."</li>
-                            <li>"Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."</li>
-                            <li>"The estimated annual cost of their current inefficiencies is **$300,000**."</li>
+                            <li>"Please provide a value calculation for a Residential prospect."</li>
+                            <li>"They are an HVAC company called Polar Air."</li>
+                            <li>"They have 50 field technicians."</li>
+                            <li>"Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."</li>
+                            <li>"The estimated annual cost of their current inefficiencies is $300,000."</li>
                         </ul>
                     </div>
 
@@ -206,13 +206,13 @@
                         <p class="font-semibold text-slate-800 mb-2">Output: Understanding the Value Breakdown</p>
                         <p class="mb-2 text-slate-600">When you query the Gem with the structured input, it will provide a detailed value calculation. This output is designed to be clear, concise, and directly applicable to your sales conversations.</p>
                         <ul class="list-disc list-inside space-y-1 mt-2 text-sm text-slate-700 pl-4">
-                            <li><strong>Executive Summary:</strong> A one-paragraph summary of the key findings.</li>
-                            <li><strong>Key Value Metrics:</strong> A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
-                            <li><strong>Supporting Case Cases:</strong> A reference to one or two case studies from the knowledge base that support the metrics.</li>
-                            <li><strong>Talk Track Recommendation:</strong> A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
-                            <li><strong>Monthly Value Generated:</strong> A section detailing the potential monetary value of hours and new tasks accomplished.</li>
-                            <li><strong>Monthly Cost of Simpro Licenses:</strong> A section outlining the cost of the required licenses.</li>
-                            <li><strong>Net Monthly Impact:</strong> The final calculated net gain or loss for the client.</li>
+                            <li>Executive Summary: A one-paragraph summary of the key findings.</li>
+                            <li>Key Value Metrics: A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
+                            <li>Supporting Case Cases: A reference to one or two case studies from the knowledge base that support the metrics.</li>
+                            <li>Talk Track Recommendation: A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
+                            <li>Monthly Value Generated: A section detailing the potential monetary value of hours and new tasks accomplished.</li>
+                            <li>Monthly Cost of Simpro Licenses: A section outlining the cost of the required licenses.</li>
+                            <li>Net Monthly Impact: The final calculated net gain or loss for the client.</li>
                         </ul>
                     </div>
 
@@ -220,10 +220,10 @@
                         <p class="font-semibold text-slate-800 mb-2">Wow Your Prospect with a Visual Value Breakdown!</p>
                         <p class="mb-2 text-slate-600">After the Gem provides the value breakdown, you can use Gemini Canvas to quickly transform this data into a compelling infographic to share with your prospect. This visual summary can significantly enhance your presentation and leave a lasting impact.</p>
                         <ol class="list-decimal list-inside space-y-2 text-sm text-slate-700 pl-4">
-                            <li><strong>Copy Gem Output:</strong> Copy the entire value breakdown output from the Gem.</li>
-                            <li><strong>Go to Gemini Canvas:</strong> Open a new Canvas in your Gemini instance.</li>
-                            <li><strong>Paste & Prompt:</strong> Paste the Gem's output into the Canvas. Then, prompt Gemini to "Create an infographic summarizing this value breakdown for [Prospect Company Name], highlighting the net monthly impact and key savings areas."</li>
-                            <li><strong>Review & Share:</strong> Review the generated infographic. You can make minor edits directly in Canvas. Once satisfied, share it directly with your prospect or use it in a follow-up email.</li>
+                            <li>Copy Gem Output: Copy the entire value breakdown output from the Gem.</li>
+                            <li>Go to Gemini Canvas: Open a new Canvas in your Gemini instance.</li>
+                            <li>Paste & Prompt: Paste the Gem's output into the Canvas. Then, prompt Gemini to "Create an infographic summarizing this value breakdown for [Prospect Company Name], highlighting the net monthly impact and key savings areas."</li>
+                            <li>Review & Share: Review the generated infographic. You can make minor edits directly in Canvas. Once satisfied, share it directly with your prospect or use it in a follow-up email.</li>
                         </ol>
                         <p class="font-semibold text-slate-800 mt-4 mb-2">Example Infographic Mockup:</p>
                         <pre class="bg-white p-4 rounded-md border border-slate-200 text-xs sm:text-sm overflow-x-auto">
@@ -233,27 +233,27 @@
 |          (http://cprelectricnj.com/)              |
 +---------------------------------------------------+
 |                                                   |
-|  <strong>EXECUTIVE SUMMARY:</strong>                     |
+|  EXECUTIVE SUMMARY:                               |
 |  "Optimizing operations for significant monthly    |
 |   savings and improved efficiency."               |
 |                                                   |
-|  <strong>KEY VALUE METRICS:</strong>                         |
+|  KEY VALUE METRICS:                               |
 |  -----------------------------------------------  |
 |  Pain Points: Wasted Crew Hours, Margin Erosion   |
 |  Estimated Monthly Savings:    +$700             |
 |  Net Monthly Impact:           +$366             |
 |                                                   |
-|  <strong>MONTHLY VALUE GAIN:</strong>        +$700             |
+|  MONTHLY VALUE GAIN:        +$700             |
 |      ---------------------------------------      |
 |      From reducing Wasted Crew Hours.             |
 |      From reducing Margin Erosion.                |
 |                                                   |
-|  <strong>MONTHLY SIMPRO COST:</strong>       -$334             |
+|  MONTHLY SIMPRO COST:       -$334             |
 |      ---------------------------------------      |
 |      🏢 Premium Licenses (1 @ $226/mo): -$226     |
 |      📱 Mobile Licenses (3 @ $36/mo):   -$108     |
 |                                                   |
-|  <strong>NET MONTHLY IMPACT:</strong>        +$366             |
+|  NET MONTHLY IMPACT:        +$366             |
 |                                                   |
 |  "Simpro provides a clear positive ROI, enabling  |
 |   efficient growth and stronger margins."         |
