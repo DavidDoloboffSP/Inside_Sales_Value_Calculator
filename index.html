@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simpro ISR Enablement Hub</title>
+    <title>Build Your ISR Value Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +60,7 @@
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
 
         <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Simpro ISR Enablement Hub</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Build Your ISR Value Calculator</h1>
             <p class="mt-2 text-lg text-slate-600">Your interactive guide to building the Gem and mastering value communication.</p>
         </header>
 
@@ -130,12 +130,32 @@
 **Your Process:**
 
 1. **Receive Input:** An ISR will provide a prompt that includes a customer's business type (residential or commercial) and specific details like the number of field technicians, current pain points, and specific industry.
+    * **Crucial: Always ask the user to provide input in the following structured format:**
+        * "Please provide a value calculation for a **[Customer Type]** prospect."
+        * "They are a **[Industry]** company called **[Company Website]**."
+        * "They have **[Number]** field technicians."
+        * "Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."
+        * "The estimated annual cost of their current inefficiencies is **[Amount]**."
+    * **Example of expected user input:**
+        * "Please provide a value calculation for a **Residential** prospect."
+        * "They are an **HVAC** company called **Polar Air**."
+        * "They have **50** field technicians."
+        * "Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."
+        * "The estimated annual cost of their current inefficiencies is **$300,000**."
 
 2. **Analyze and Synthesize:** Search your knowledge base for relevant case studies and metrics that directly relate to the customer's input. For example, if the prospect is a residential plumbing business, find case studies like 'Zebra Plumbing' or 'Thompson Tree Services' to extract key metrics (e.g., faster quoting, revenue growth, profit margin increases).
 
 3. **Quantify Value:** Use the data found to create a simple, compelling value calculation. Show the potential benefits in terms of time, money, and growth. If an exact number isn't available, use a conservative range or qualitative statements based on the data.
 
 4. **Structure the Response:** Present the answer in a clear, easy-to-read format with a brief summary, the key value metrics, and links to the relevant source documents from the knowledge base.
+    * **Crucial: Always present the output in the following structured format:**
+        * **Executive Summary:** A one-paragraph summary of the key findings.
+        * **Key Value Metrics:** A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").
+        * **Supporting Case Studies:** A reference to one or two case studies from the knowledge base that support the metrics.
+        * **Talk Track Recommendation:** A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.
+        * **Monthly Value Generated:** A section detailing the potential monetary value of hours and new tasks accomplished.
+        * **Monthly Cost of Simpro Licenses:** A section outlining the cost of the required licenses.
+        * **Net Monthly Impact:** The final calculated net gain or loss for the client.
 
 **Goal:** To provide the ISR with a powerful, data-backed value message they can use in their conversation to demonstrate the tangible benefits of Simpro."</pre>
                             </div>
@@ -146,56 +166,99 @@
                             <div id="copy-feedback" class="mt-2 text-green-600 font-medium hidden">Prompt copied to clipboard!</div>
                         </div>
                     </div>
-                    <!-- Accordion Item 3 -->
-                    <div class="border border-slate-200 rounded-lg">
-                        <button class="accordion-toggle flex justify-between items-center w-full p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
-                            <span>Step 3: Configure the Gem's Output</span>
-                             <svg class="accordion-icon w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="accordion-content hidden p-4 pt-0 text-slate-600">
-                             <p class="mb-2">When you create your Gem, its output should follow a clear and consistent structure to ensure it's easy for your team to use. A good format might be a detailed value calculation as demonstrated below:</p>
-                             <div class="bg-slate-100 p-4 rounded-md border border-slate-200">
-                                <p class="font-semibold text-slate-800">Example Output Structure:</p>
-                                <ul class="list-disc list-inside space-y-1 mt-2">
-                                    <li><strong>Executive Summary:</strong> A one-paragraph summary of the key findings.</li>
-                                    <li><strong>Key Value Metrics:</strong> A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
-                                    <li><strong>Supporting Case Studies:</strong> A reference to one or two case studies from the knowledge base that support the metrics.</li>
-                                    <li><strong>Talk Track Recommendation:</strong> A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
-                                    <li><strong>Monthly Value Generated:</strong> A section detailing the potential monetary value of hours and new tasks accomplished.</li>
-                                    <li><strong>Monthly Cost of Simpro Licenses:</strong> A section outlining the cost of the required licenses.</li>
-                                    <li><strong>Net Monthly Impact:</strong> The final calculated net gain or loss for the client.</li>
-                                </ul>
-                             </div>
-                        </div>
+                </div>
+            </section>
+
+            <section id="using-value-calculator" class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+                <div class="flex items-center gap-4 mb-6">
+                     <div class="bg-blue-100 text-blue-700 rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zM13 7.414V3.5L18.5 9H13V7.414zM12 11a1 1 0 100 2h.01a1 1 0 100-2H12zm-4 4a1 1 0 100 2h.01a1 1 0 100-2H8z"/></svg>
                     </div>
-                    <!-- Accordion Item 4 -->
-                    <div class="border border-slate-200 rounded-lg">
-                        <button class="accordion-toggle flex justify-between items-center w-full p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
-                            <span>Step 4: The User Input Prompt</span>
-                             <svg class="accordion-icon w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="accordion-content hidden p-4 pt-0 text-slate-600">
-                             <p class="mb-2">To get the most effective value calculation, the ISR should provide the following information to the Gem, formatted with a bullet point for each item. You can copy and paste this structure.</p>
-                             <div class="bg-slate-100 p-4 rounded-md border border-slate-200">
-                                <p class="font-semibold text-slate-800 mb-2">Example Input Structure:</p>
-                                <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
-                                    <li>"Please provide a value calculation for a **[Customer Type]** prospect."</li>
-                                    <li>"They are a **[Industry]** company called **[Company Name]**."</li>
-                                    <li>"They have **[Number]** field technicians."</li>
-                                    <li>"Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."</li>
-                                    <li>"The estimated annual cost of their current inefficiencies is **[Amount]**."</li>
-                                </ul>
-                                
-                                <p class="font-semibold text-slate-800 mt-4 mb-2">Example Filled-In Prompt:</p>
-                                <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
-                                    <li>"Please provide a value calculation for a **Residential** prospect."</li>
-                                    <li>"They are an **HVAC** company called **Polar Air**."</li>
-                                    <li>"They have **50** field technicians."</li>
-                                    <li>"Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."</li>
-                                    <li>"The estimated annual cost of their current inefficiencies is **$300,000**."</li>
-                                </ul>
-                             </div>
-                        </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Using The Value Calculator</h2>
+                        <p class="text-slate-500 mt-1">Learn how to query the Gem and understand its output for effective value conversations.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-slate-50 p-4 rounded-md border border-slate-200">
+                        <p class="font-semibold text-slate-800 mb-2">Input: How to Query the Gem</p>
+                        <p class="mb-2 text-slate-600">To get the most effective value calculation, the ISR should provide the following information to the Gem, formatted with a bullet point for each item. You can copy and paste this structure directly into the Gem.</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
+                            <li>"Please provide a value calculation for a **[Customer Type]** prospect."</li>
+                            <li>"They are a **[Industry]** company called **[Company Website]**."</li>
+                            <li>"They have **[Number]** field technicians."</li>
+                            <li>"Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."</li>
+                            <li>"The estimated annual cost of their current inefficiencies is **[Amount]**."</li>
+                        </ul>
+                        
+                        <p class="font-semibold text-slate-800 mt-4 mb-2">Example Filled-In Prompt:</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
+                            <li>"Please provide a value calculation for a **Residential** prospect."</li>
+                            <li>"They are an **HVAC** company called **Polar Air**."</li>
+                            <li>"They have **50** field technicians."</li>
+                            <li>"Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."</li>
+                            <li>"The estimated annual cost of their current inefficiencies is **$300,000**."</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-md border border-slate-200">
+                        <p class="font-semibold text-slate-800 mb-2">Output: Understanding the Value Breakdown</p>
+                        <p class="mb-2 text-slate-600">When you query the Gem with the structured input, it will provide a detailed value calculation. This output is designed to be clear, concise, and directly applicable to your sales conversations.</p>
+                        <ul class="list-disc list-inside space-y-1 mt-2 text-sm text-slate-700 pl-4">
+                            <li><strong>Executive Summary:</strong> A one-paragraph summary of the key findings.</li>
+                            <li><strong>Key Value Metrics:</strong> A detailed breakdown of quantifiable results (e.g., "Up to 50% reduction in admin time," "$100k+ recovered margin").</li>
+                            <li><strong>Supporting Case Cases:</strong> A reference to one or two case studies from the knowledge base that support the metrics.</li>
+                            <li><strong>Talk Track Recommendation:</strong> A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
+                            <li><strong>Monthly Value Generated:</strong> A section detailing the potential monetary value of hours and new tasks accomplished.</li>
+                            <li><strong>Monthly Cost of Simpro Licenses:</strong> A section outlining the cost of the required licenses.</li>
+                            <li><strong>Net Monthly Impact:</strong> The final calculated net gain or loss for the client.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-md border border-slate-200">
+                        <p class="font-semibold text-slate-800 mb-2">Wow Your Prospect with a Visual Value Breakdown!</p>
+                        <p class="mb-2 text-slate-600">After the Gem provides the value breakdown, you can use Gemini Canvas to quickly transform this data into a compelling infographic to share with your prospect. This visual summary can significantly enhance your presentation and leave a lasting impact.</p>
+                        <ol class="list-decimal list-inside space-y-2 text-sm text-slate-700 pl-4">
+                            <li><strong>Copy Gem Output:</strong> Copy the entire value breakdown output from the Gem.</li>
+                            <li><strong>Go to Gemini Canvas:</strong> Open a new Canvas in your Gemini instance.</li>
+                            <li><strong>Paste & Prompt:</strong> Paste the Gem's output into the Canvas. Then, prompt Gemini to "Create an infographic summarizing this value breakdown for [Prospect Company Name], highlighting the net monthly impact and key savings areas."</li>
+                            <li><strong>Review & Share:</strong> Review the generated infographic. You can make minor edits directly in Canvas. Once satisfied, share it directly with your prospect or use it in a follow-up email.</li>
+                        </ol>
+                        <p class="font-semibold text-slate-800 mt-4 mb-2">Example Infographic Mockup:</p>
+                        <pre class="bg-white p-4 rounded-md border border-slate-200 text-xs sm:text-sm overflow-x-auto">
++---------------------------------------------------+
+|               SIMPRO VALUE SNAPSHOT               |
+|          For: CPR Electric NJ                     |
+|          (http://cprelectricnj.com/)              |
++---------------------------------------------------+
+|                                                   |
+|  <strong>EXECUTIVE SUMMARY:</strong>                     |
+|  "Optimizing operations for significant monthly    |
+|   savings and improved efficiency."               |
+|                                                   |
+|  <strong>KEY VALUE METRICS:</strong>                         |
+|  -----------------------------------------------  |
+|  Pain Points: Wasted Crew Hours, Margin Erosion   |
+|  Estimated Monthly Savings:    +$700             |
+|  Net Monthly Impact:           +$366             |
+|                                                   |
+|  <strong>MONTHLY VALUE GAIN:</strong>        +$700             |
+|      ---------------------------------------      |
+|      From reducing Wasted Crew Hours.             |
+|      From reducing Margin Erosion.                |
+|                                                   |
+|  <strong>MONTHLY SIMPRO COST:</strong>       -$334             |
+|      ---------------------------------------      |
+|      🏢 Premium Licenses (1 @ $226/mo): -$226     |
+|      📱 Mobile Licenses (3 @ $36/mo):   -$108     |
+|                                                   |
+|  <strong>NET MONTHLY IMPACT:</strong>        +$366             |
+|                                                   |
+|  "Simpro provides a clear positive ROI, enabling  |
+|   efficient growth and stronger margins."         |
++---------------------------------------------------+
+                        </pre>
                     </div>
                 </div>
             </section>
@@ -336,9 +399,10 @@
                         title: "Pro Tips for ISRs",
                         icon: "🛠️",
                         content: [
-                            "Lead with questions about growth goals: “What’s holding you back from adding more jobs to the schedule?”",
-                            "Focus on efficiency gains that translate directly to revenue.",
-                            "Highlight the mobile app's ability to reduce trips back to the office."
+                            "Lead with discovery: “How do you handle SLA compliance today?”",
+                            "Position Simpro as a contract retention tool, not just operational software.",
+                            "Use asset lifecycle examples (like fridges aging out) to show strategic value.",
+                            "Talk profit, not just hours — commercial customers care about bottom line."
                         ]
                     }
                 ]
