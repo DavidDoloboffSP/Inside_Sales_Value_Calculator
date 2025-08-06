@@ -133,15 +133,17 @@ Your Process:
     * Crucial: Always ask the user to provide input in the following structured format:
         * "Please provide a value calculation for a [Customer Type] prospect."
         * "They are a [Industry] company called [Company Website]."
-        * "They have [Number] field technicians."
+        * "They need [Number] premium licenses, and [Number] mobile licenses."
         * "Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."
         * "The estimated annual cost of their current inefficiencies is [Amount]."
+        * "The prospect is based in the [Region (UK, US, AU, NZ)] region."
     * Example of expected user input:
         * "Please provide a value calculation for a Residential prospect."
         * "They are an HVAC company called Polar Air."
-        * "They have 50 field technicians."
+        * "They need 1 premium license, and 3 mobile licenses."
         * "Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."
         * "The estimated annual cost of their current inefficiencies is $300,000."
+        * "The prospect is based in the US region."
 
 2. Analyze and Synthesize: Search your knowledge base for relevant case studies and metrics that directly relate to the customer's input. For example, if the prospect is a residential plumbing business, find case studies like 'Zebra Plumbing' or 'Thompson Tree Services' to extract key metrics (e.g., faster quoting, revenue growth, profit margin increases).
 
@@ -154,10 +156,10 @@ Your Process:
         * Supporting Case Studies: A reference to one or two case studies from the knowledge base that support the metrics.
         * Talk Track Recommendation: A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.
         * Monthly Value Generated: A section detailing the potential monetary value of hours and new tasks accomplished.
-        * Monthly Cost of Simpro Licenses: A section outlining the cost of the required licenses.
-        * Net Monthly Impact: The final calculated net gain or loss for the client.
+        * Monthly Cost of Simpro Licenses: A section outlining the cost of the required licenses, clearly stating the currency based on the provided region.
+        * Net Monthly Impact: The final calculated net gain or loss for the client, clearly stating the currency based on the provided region.
 
-Goal: To provide the ISR with a powerful, data-backed value message they can use in their conversation to demonstrate the tangible benefits of Simpro."</pre>
+Goal: To provide the ISR with a powerful, data-backed value message that can be used in their conversation to demonstrate the tangible benefits of Simpro."</pre>
                             </div>
                             <button id="copy-prompt-btn" class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
@@ -187,18 +189,20 @@ Goal: To provide the ISR with a powerful, data-backed value message they can use
                         <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
                             <li>"Please provide a value calculation for a [Customer Type] prospect."</li>
                             <li>"They are a [Industry] company called [Company Website]."</li>
-                            <li>"They have [Number] field technicians."</li>
+                            <li>"They need [Number] premium licenses, and [Number] mobile licenses."</li>
                             <li>"Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."</li>
                             <li>"The estimated annual cost of their current inefficiencies is [Amount]."</li>
+                            <li>"The prospect is based in the [Region (UK, US, AU, NZ)] region."</li>
                         </ul>
                         
                         <p class="font-semibold text-slate-800 mt-4 mb-2">Example Filled-In Prompt:</p>
                         <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
                             <li>"Please provide a value calculation for a Residential prospect."</li>
                             <li>"They are an HVAC company called Polar Air."</li>
-                            <li>"They have 50 field technicians."</li>
+                            <li>"They need 1 premium license, and 3 mobile licenses."</li>
                             <li>"Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."</li>
                             <li>"The estimated annual cost of their current inefficiencies is $300,000."</li>
+                            <li>"The prospect is based in the US region."</li>
                         </ul>
                     </div>
 
@@ -211,8 +215,8 @@ Goal: To provide the ISR with a powerful, data-backed value message they can use
                             <li>Supporting Case Cases: A reference to one or two case studies from the knowledge base that support the metrics.</li>
                             <li>Talk Track Recommendation: A suggestion on how to frame this information, referencing the enablement guidelines in Part 2.</li>
                             <li>Monthly Value Generated: A section detailing the potential monetary value of hours and new tasks accomplished.</li>
-                            <li>Monthly Cost of Simpro Licenses: A section outlining the cost of the required licenses.</li>
-                            <li>Net Monthly Impact: The final calculated net gain or loss for the client.</li>
+                            <li>Monthly Cost of Simpro Licenses: A section outlining the cost of the required licenses, clearly stating the currency based on the provided region.</li>
+                            <li>Net Monthly Impact: The final calculated net gain or loss for the client, clearly stating the currency based on the provided region.</li>
                         </ul>
                     </div>
 
@@ -229,7 +233,7 @@ Goal: To provide the ISR with a powerful, data-backed value message they can use
                         <pre class="bg-white p-4 rounded-md border border-slate-200 text-xs sm:text-sm overflow-x-auto">
 +---------------------------------------------------+
 |               SIMPRO VALUE SNAPSHOT               |
-|          For: CPR Electric NJ                     |
+|          For: CPR Electric NJ (US Region)         |
 |          (http://cprelectricnj.com/)              |
 +---------------------------------------------------+
 |                                                   |
@@ -240,20 +244,20 @@ Goal: To provide the ISR with a powerful, data-backed value message they can use
 |  KEY VALUE METRICS:                               |
 |  -----------------------------------------------  |
 |  Pain Points: Wasted Crew Hours, Margin Erosion   |
-|  Estimated Monthly Savings:    +$700             |
-|  Net Monthly Impact:           +$366             |
+|  Estimated Monthly Savings:    +$700 USD         |
+|  Net Monthly Impact:           +$366 USD         |
 |                                                   |
-|  MONTHLY VALUE GAIN:        +$700             |
+|  MONTHLY VALUE GAIN:        +$700 USD         |
 |      ---------------------------------------      |
 |      From reducing Wasted Crew Hours.             |
 |      From reducing Margin Erosion.                |
 |                                                   |
-|  MONTHLY SIMPRO COST:       -$334             |
+|  MONTHLY SIMPRO COST:       -$334 USD         |
 |      ---------------------------------------      |
-|      🏢 Premium Licenses (1 @ $226/mo): -$226     |
-|      📱 Mobile Licenses (3 @ $36/mo):   -$108     |
+|      🏢 Premium Licenses (1 @ $226/mo USD): -$226 |
+|      📱 Mobile Licenses (3 @ $36/mo USD):   -$108 |
 |                                                   |
-|  NET MONTHLY IMPACT:        +$366             |
+|  NET MONTHLY IMPACT:        +$366 USD         |
 |                                                   |
 |  "Simpro provides a clear positive ROI, enabling  |
 |   efficient growth and stronger margins."         |
