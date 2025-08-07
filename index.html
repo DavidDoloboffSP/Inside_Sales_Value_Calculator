@@ -130,20 +130,20 @@
 Your Process:
 
 1. Receive Input: An ISR will provide a prompt that includes a customer's business type (residential or commercial) and specific details like the number of field technicians, current pain points, and specific industry.
-    * Crucial: Always ask the user to provide input in the following structured format:
-        * "Please provide a value calculation for a [Customer Type] prospect."
-        * "They are a [Industry] company called [Company Website]."
-        * "They need [Number] premium licenses, and [Number] mobile licenses."
-        * "Their main pain points are [Pain Point 1], [Pain Point 2], and [Pain Point 3]."
-        * "The estimated annual cost of their current inefficiencies is [Amount]."
-        * "The prospect is based in the [Region (UK, US, AU, NZ)] region."
+    * You are designed to accept value calculation information in natural language. If I am missing any details or am unclear, please ask for clarification or for the specific piece of information needed. You can also provide me with the template below to help format your input:
+        * "Please provide a value calculation for a **[Customer Type]** prospect."
+        * "They are a **[Industry]** company called **[Company Website]**."
+        * "They need **[Number]** premium licenses, and **[Number]** mobile licenses."
+        * "Their main pain points are **[Pain Point 1]**, **[Pain Point 2]**, and **[Pain Point 3]**."
+        * "The estimated annual cost of their current inefficiencies is **[Amount]**."
+        * "The prospect is based in the **[Region (UK, US, AU, NZ)]** region."
     * Example of expected user input:
-        * "Please provide a value calculation for a Residential prospect."
-        * "They are an HVAC company called Polar Air."
-        * "They need 1 premium license, and 3 mobile licenses."
-        * "Their main pain points are inefficient scheduling, manual invoicing, and a lack of job costing visibility."
-        * "The estimated annual cost of their current inefficiencies is $300,000."
-        * "The prospect is based in the US region."
+        * "Please provide a value calculation for a **Residential** prospect."
+        * "They are an **HVAC** company called **Polar Air**."
+        * "They need **1** premium license, and **3** mobile licenses."
+        * "Their main pain points are **inefficient scheduling**, **manual invoicing**, and a **lack of job costing visibility**."
+        * "The estimated annual cost of their current inefficiencies is **$300,000**."
+        * "The prospect is based in the **US** region."
 
 2. Analyze and Synthesize: Search your knowledge base for relevant case studies and metrics that directly relate to the customer's input. For example, if the prospect is a residential plumbing business, find case studies like 'Zebra Plumbing' or 'Thompson Tree Services' to extract key metrics (e.g., faster quoting, revenue growth, profit margin increases).
 
@@ -185,6 +185,7 @@ Goal: To provide the ISR with a powerful, data-backed value message that can be 
                 <div class="space-y-6">
                     <div class="bg-slate-50 p-4 rounded-md border border-slate-200">
                         <p class="font-semibold text-slate-800 mb-2">Input: How to Query the Gem</p>
+                        <p class="mb-2 text-slate-600">**The best way to start a conversation with your gem now that it's built is to say: "I need a value calculated" and the Gem will reply with the query template.**</p>
                         <p class="mb-2 text-slate-600">To get the most effective value calculation, the ISR should provide the following information to the Gem, formatted with a bullet point for each item. You can copy and paste this structure directly into the Gem.</p>
                         <ul class="list-disc list-inside space-y-2 text-sm text-slate-700 pl-4">
                             <li>"Please provide a value calculation for a [Customer Type] prospect."</li>
